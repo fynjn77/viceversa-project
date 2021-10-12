@@ -9,10 +9,8 @@
 </head>
 <body>
     <h1>Vice Versa home page!</h1>
-    <form action="">
-        <textarea name="usertext" id="" cols="50" rows="10">
-            So, i gonna try work with forms on Django.
-        </textarea>
+    <form action="{% url 'reverse' %}">
+        <textarea name="usertext" id="" cols="50" rows="10"></textarea>
         <br>
         <br>
         <input type="submit" value="Reverse!">
