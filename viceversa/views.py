@@ -10,5 +10,11 @@ def home(request):
 def reverse(request):
     # return HttpResponse('soooooo')
     user_text = request.GET['usertext']
-    user_text = user_text[::-1]
-    return render(request, 'reverse.html',{'usertext':user_text})
+    reverse_text = user_text[::-1]
+    counter_words = len(user_text.split())
+    return render(request, 'reverse.html',{'reverse_text': reverse_text,
+                                           'user_text': user_text,
+                                           'counter_words': counter_words})
+
+
+
